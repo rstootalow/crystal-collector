@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* DEFAULT PAGE STYLING */
+
+header h1 {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.score-to-match, .win-loss {
+    border: 2px solid black;
+}
