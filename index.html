@@ -19,6 +19,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
+                <h2>Instructions</h2>
                 <p>You will be start the game with  a random number at the start of the game</p>
                 <p>There are four crystals below. Each crystal will be assigned a random value at the start of each new game</p>
                 <p>When you click on the crystal, the number of points for that crystal will be assigned to your total score</p>
@@ -29,7 +30,7 @@
             </div>
         </div>
             <div class="row">
-                <div class="col-8 score-to-match">
+                <div class="col-8" id="score-to-match">
                     <div class="score">
                         <p></p>
                     </div>
@@ -39,15 +40,15 @@
                     <p class="losses">Losses: 0</p>
                 </div>
             </div>
-            <div class="row crystals">
-                <img src="../crystal-collector/assets/images/blue-crystal.png" alt="Blue Crystal">
-                <img src="../crystal-collector/assets/images/green-crystal.png" alt="Green Crystal">
-                <img src="../crystal-collector/assets/images/orange-crystal.png" alt="Orange Crystal">
-                <img src="../crystal-collector/assets/images/red-crystal.png" alt="Red Crystal">
+            <div class="row">
+                <img class="crystal blue" src="../crystal-collector/assets/images/blue-crystal.png" alt="Blue Crystal">
+                <img class="crystal green" src="../crystal-collector/assets/images/green-crystal.png" alt="Green Crystal">
+                <img class="crystal orange" src="../crystal-collector/assets/images/orange-crystal.png" alt="Orange Crystal">
+                <img class="crystal red" src="../crystal-collector/assets/images/red-crystal.png" alt="Red Crystal">
             </div>
             <div class="row player-score">
                 <div class="col-12 score-count" >Your Total Score Is:</div>
-                <div class="col-12 scoreboard">0</div>
+                
             </div>
         </div>
 
