@@ -25,10 +25,11 @@ The player will have to guess the answer, just like in Word Guess. This time, th
 */
 
 var playerScore = 0;
-var blue = Math.floor(Math.random() * 16);
-var green = Math.floor(Math.random() * 16);
-var orange = Math.floor(Math.random() * 16);
-var red = Math.floor(Math.random() * 16);
+var scoreToWin = 0;
+var blue = randomNum(1, 20);
+var green = randomNum(1, 20);
+var purple = randomNum(1, 20);
+var red = randomNum(1, 20);
 var wins = 0;
 var losses= 0;
 
@@ -59,8 +60,8 @@ function gamePlay() {
     scoreCompare();
   });
   
-  $(".orange").on("click", function() {
-    playerScore += orange;
+  $(".purple").on("click", function() {
+    playerScore += purple;
     console.log(playerScore);//TEST
     $('.score-count').text("Your Total Score is: " + playerScore);
     scoreCompare();
@@ -79,16 +80,29 @@ function scoreCompare() {
     losses++;
     $(".losses").text("Losses: " + losses);
     alert("You've lost the game. Better luck next time!");
+    gameReset();
   } else {
     if (playerScore === scoreToWin) {
       wins++
       $(".wins").text("Wins: " + wins);
       alert("Congrats! You've won the game!");
+      gameReset();
     }
   }
+}
+
+function gameReset() {
+  playerScore = 0;
+  blue = randomNum(1, 20);
+  green = randomNum(1, 20);
+  purple = randomNum(1, 20);
+  red = randomNum(1, 20);
+  wins = 0;
+  losses= 0;
 }
 
 //FUNCTION CALLS
 
 gamePlay();
 scoreCompare();
+gameReset();
