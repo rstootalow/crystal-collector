@@ -4,52 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Crystal Collector Game</title>
-    <!-- Links to Bootstrap, CSS Override/Reset-->
-
+    <!-- GOOGLE FONT LINK -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <!-- FONT AWESOME LINK -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- BOOTSTRAP LINK -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="assets/css/normalize.css"> -->
     <link rel="stylesheet" href="assets/css/styles.css">
-
+    <title>Crystal Collector Game</title>
 </head>
 <body>
     <header>
+        <img class="header-crystals" src="assets/images/header-crystals.png" alt="Crystals">
         <h1>Crystal Collector Game</h1>
+        <img class="header-crystals" src="assets/images/header-crystals.png" alt="Crystals">
     </header>
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>Instructions</h2>
-                <p>You will be start the game with  a random number at the start of the game</p>
-                <p>There are four crystals below. Each crystal will be assigned a random value at the start of each new game</p>
-                <p>When you click on the crystal, the number of points for that crystal will be assigned to your total score</p>
-                <p>The objective is to click on the crystal in such a way to match the random number of points you were given at the start of the game.</p>
-                <p>The value of each crystal is hidden from you until you click on the crystal, at which point the points will appear in your scoreboard</p>
-                <p>To reiterate, the number of points for each crystal will change at the start of each new game</p>
-                <p>Good Luck!</p>
+                <ul>
+                    <h2>Instructions</h2>
+                    <li> <i class="far fa-gem"></i>
+                        You will be start the game with  a random number at the start of the game
+                    </li>
+                    <li> <i class="far fa-gem"></i>
+                        There are four crystals below. Each crystal will be assigned a random value at the start of each new game</li>
+                    <li><i class="far fa-gem"></i>
+                        When you click on the crystal, the number of points for that crystal will be assigned to your total score</li>
+                    <li><i class="far fa-gem"></i>
+                        Click on the crystals to try and match the number of points provided at the start of the game</li>
+                    <li><i class="far fa-gem"></i>
+                        To reiterate, the number of points for each crystal will change at the start of each new game</li>
+                    <li class="luck">Good Luck!</li>
+                </ul>
             </div>
         </div>
             <div class="row">
-                <div class="col-8" id="score-to-match">
-                    <div class="score">
-                        <p></p>
-                    </div>
-                </div>
-                <div class="col-4 win-loss">
-                    <p class="wins">Wins: 0</p>
-                    <p class="losses">Losses: 0</p>
+                <div class="col-12" id="score-to-match"></div>
+                <div class=" row col-12 win-loss">
+                    <p class=" col-6 wins">Wins: 0</p>
+                    <p class="col-6 losses">Losses: 0</p>
                 </div>
             </div>
-            <div class="row">
+            <div class="row game-pieces">
                 <img class="crystal blue" src="../crystal-collector/assets/images/blue-crystal.png" alt="Blue Crystal">
                 <img class="crystal green" src="../crystal-collector/assets/images/green-crystal.png" alt="Green Crystal">
-                <img class="crystal orange" src="../crystal-collector/assets/images/orange-crystal.png" alt="Orange Crystal">
+                <img class="crystal purple" src="../crystal-collector/assets/images/purple-crystal.png" alt="Purple Crystal">
                 <img class="crystal red" src="../crystal-collector/assets/images/red-crystal.png" alt="Red Crystal">
             </div>
             <div class="row player-score">
-                <div class="col-12 score-count" >Your Total Score Is:</div>
-                
+                <div class="col-12 score-count" >Your Total Score Is: 0</div>
             </div>
+            
         </div>
 
 <!-- Jquery CDN -->
